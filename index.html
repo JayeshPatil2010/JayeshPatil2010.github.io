@@ -188,50 +188,47 @@
 
   <main>
     <section id="project1">
-      <h2>Featured Project: Global Goals Interactive</h2>
-      
-      <!-- Splashscreen iframe -->
-      <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/cadetBlueSnake395066/embed"></iframe>
-      
-      <!-- Project description -->
-      <p>This project is an interactive visualization of the UN Sustainable Development Goals. I focused on the goals that inspire me most: <strong>Zero Hunger</strong> (top right) and <strong>Reduced Inequalities</strong> (bottom left). It was built to raise awareness through engagement and creative coding.</p>
-      
-      <!-- Concepts learned -->
-      <h3>Concepts Learned</h3>
-      <ul>
-        <li>Embedding interactive content in web pages</li>
-        <li>Using iframes for project demos</li>
-        <li>Understanding the UN Sustainable Development Goals framework</li>
-        <li>Basic HTML/CSS layout and styling</li>
-        <li>Designing user-focused engagement features</li>
-      </ul>
-      
-      <!-- Code snippet -->
-      <h3>Code Snippet</h3>
-      <pre><code>
-// Example Python snippet from my project
-def highlight_goals(goals):
-    # Filter goals for Zero Hunger and Reduced Inequalities
-    important_goals = []
-    for goal in goals:
-        if goal['name'] in ['Zero Hunger', 'Reduced Inequalities']:
-            important_goals.append(goal)
-    return important_goals
+  <h2>Featured Project: Global Goals Interactive</h2>
 
-goals = [
-    {'name': 'No Poverty', 'index': 1},
-    {'name': 'Zero Hunger', 'index': 2},
-    {'name': 'Reduced Inequalities', 'index': 10},
-]
+  <!-- Splashscreen iframe -->
+  <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/cadetBlueSnake395066/embed"></iframe>
 
-highlighted = highlight_goals(goals)
-print("Highlighted Goals:", highlighted)
-      </code></pre>
-      
-      <!-- Meaningful picture -->
-      <h3>Project Image</h3>
-      <img class="project-image" src="https://example.com/path-to-your-project-image.jpg" alt="Screenshot or diagram of Global Goals project" />
-    </section>
+  <!-- Project description -->
+  <p>
+    This interactive artwork was created in collaboration with Carolyn and highlights four UN Sustainable Development Goals through visuals and symbolic design:
+    <strong>Zero Hunger</strong>, <strong>Reduced Inequalities</strong> (Jayesh), and <strong>Clean Water</strong> and <strong>Quality Education</strong> (Carolyn).
+    Each quadrant of the canvas is color-coded and features unique graphics to reflect its theme, from stylized icons to animated lines and text.
+  </p>
+
+  <!-- Concepts learned -->
+  <h3>Concepts Learned</h3>
+  <ul>
+    <li>Positioning and layout with coordinates in creative coding</li>
+    <li>Working with shapes like polygons, stars, circles, and gradients</li>
+    <li>Layering and z-order in graphical design</li>
+    <li>Typography and label design in visual storytelling</li>
+    <li>Embedding collaborative work in a personal website</li>
+  </ul>
+
+  <!-- Code snippet -->
+  <h3>Code Snippet</h3>
+  <pre><code>#Jayesh: Zero Hunger
+Label('#2', 222,30, size=30, fill='white', font='cinzel')
+Circle(310,125,40, fill='white')
+Rect(270,85,80,40, fill='gold')
+Rect(296,162,30,7, fill='white')
+
+Label('Zero Hunger', 305,55, size=20, fill='white', font='cinzel', bold=True)
+Line(310,125,316,92, fill='white', lineWidth=5, opacity=60)
+Line(288,125,296,92, fill='white', lineWidth=5, opacity=60)
+Line(330,125,336,92, fill='white', lineWidth=5, opacity=60)
+Label('Jayesh', 373,184, size=10)
+  </code></pre>
+
+  <!-- Project image -->
+  <h3>Project Image</h3>
+  <img class="project-image" src="https://via.placeholder.com/410x250.png?text=Global+Goals+Project" alt="Screenshot of Global Goals Interactive project" />
+</section>
 
     <!-- Project placeholders -->
     <section id="project2">
