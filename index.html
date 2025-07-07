@@ -284,5 +284,24 @@ Label('Jayesh', 373,184, size=10)
       btn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
     }
   </script>
+  <script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const btn = document.querySelector(".toggle-button");
+    btn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+  }
+
+  // Smooth scroll override for floating nav links
+  document.querySelectorAll('nav.floating-nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
 </body>
 </html>
