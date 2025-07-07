@@ -21,6 +21,7 @@
       color: var(--text-light);
       margin: 0;
       transition: background-color 0.3s, color 0.3s;
+      scroll-behavior: smooth;
     }
 
     body.dark-mode {
@@ -95,10 +96,45 @@
 
     a {
       color: #0077cc;
+      text-decoration: none;
     }
 
     body.dark-mode a {
       color: #66ccff;
+    }
+
+    /* Sidebar navigation */
+    nav.sidebar {
+      position: fixed;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      background-color: #004080;
+      padding: 1rem;
+      border-radius: 12px;
+      z-index: 100;
+    }
+
+    nav.sidebar a {
+      color: white;
+      font-size: 0.9rem;
+      padding: 0.4rem 0.6rem;
+      background-color: #0066cc;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    nav.sidebar a:hover {
+      background-color: #3399ff;
+    }
+
+    @media (max-width: 768px) {
+      nav.sidebar {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -106,59 +142,66 @@
 
   <button class="toggle-button" onclick="toggleDarkMode()">🌙</button>
 
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar">
+    <a href="#project1">Project 1</a>
+    <a href="#project2">Project 2</a>
+    <a href="#project3">Project 3</a>
+    <a href="#project4">Project 4</a>
+    <a href="#project5">Project 5</a>
+    <a href="#project6">Project 6</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <header>
     <h1>Jayesh's Portfolio</h1>
     <div class="tagline">Creating What’s Next—One Line of Code at a Time.</div>
   </header>
 
   <main>
-    <section>
+    <section id="project1">
       <h2>Featured Project: Global Goals Interactive</h2>
       <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/cadetBlueSnake395066/embed"></iframe>
-      <p>This project is an interactive visualization of the UN Sustainable Development Goals, which I work on with a partner. I focused on the goals that inspire me most: <strong>Zero Hunger</strong> (top right) and <strong>Reduced Inequalities</strong> (bottom left). It was built to raise awareness through engagement and creative coding.</p>
+      <p>This project is an interactive visualization of the UN Sustainable Development Goals. I focused on the goals that inspire me most: <strong>Zero Hunger</strong> (top right) and <strong>Reduced Inequalities</strong> (bottom left). It was built to raise awareness through engagement and creative coding.</p>
     </section>
 
-    <!-- Future Project Placeholders -->
-
-    <section>
+    <section id="project2">
       <h2>Project 2: [Coming Soon]</h2>
-      <!-- Replace link below with your project iframe -->
       <iframe width="410" height="460" src=""></iframe>
       <p>[Add a short description of your project here.]</p>
     </section>
 
-    <section>
+    <section id="project3">
       <h2>Project 3: [Coming Soon]</h2>
       <iframe width="410" height="460" src=""></iframe>
       <p>[Add a short description of your project here.]</p>
     </section>
 
-    <section>
+    <section id="project4">
       <h2>Project 4: [Coming Soon]</h2>
       <iframe width="410" height="460" src=""></iframe>
       <p>[Add a short description of your project here.]</p>
     </section>
 
-    <section>
+    <section id="project5">
       <h2>Project 5: [Coming Soon]</h2>
       <iframe width="410" height="460" src=""></iframe>
       <p>[Add a short description of your project here.]</p>
     </section>
 
-    <section>
+    <section id="project6">
       <h2>Project 6: [Coming Soon]</h2>
       <iframe width="410" height="460" src=""></iframe>
       <p>[Add a short description of your project here.]</p>
     </section>
 
-    <!-- Bio -->
-    <section>
+    <section id="about">
       <h2>About Me</h2>
       <p>Hello! I’m Jayesh — a student passionate about using computer science to build meaningful solutions. I’m especially inspired by the UN’s goals of <strong>Zero Hunger</strong> and <strong>Reduced Inequalities</strong>. I code mostly in <strong>Python</strong> and I'm just getting started with real-world projects. Stay tuned!</p>
     </section>
 
-    <!-- Contact -->
-    <section>
+    <section id="contact">
       <h2>Contact</h2>
       <p>Want to connect or see my code?</p>
       <ul>
