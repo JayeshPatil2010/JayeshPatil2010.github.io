@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jayesh's Portfolio</title>
   <style>
+    :root {
+      --bg-light: #f0f8ff;
+      --text-light: #1f2d3d;
+      --card-light: white;
+
+      --bg-dark: #1a1a2e;
+      --text-dark: #f0f0f0;
+      --card-dark: #2e2e3e;
+    }
+
     body {
-      margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #e0f0ff, #cce0f5);
-      color: #1f2d3d;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      margin: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
     }
 
     header {
@@ -17,7 +33,6 @@
       color: white;
       padding: 2rem;
       text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     h1 {
@@ -25,10 +40,10 @@
       font-size: 2.5rem;
     }
 
-    h2 {
-      margin-top: 0.5rem;
-      font-weight: 300;
+    .tagline {
+      font-style: italic;
       font-size: 1.2rem;
+      margin-top: 0.5rem;
     }
 
     main {
@@ -38,11 +53,16 @@
     }
 
     section {
-      background-color: white;
+      background-color: var(--card-light);
       padding: 1.5rem;
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       margin-bottom: 2rem;
+      transition: background-color 0.3s;
+    }
+
+    body.dark-mode section {
+      background-color: var(--card-dark);
     }
 
     iframe {
@@ -60,35 +80,70 @@
       font-size: 0.9rem;
     }
 
-    .tagline {
+    .toggle-button {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    a {
       color: #0077cc;
-      font-style: italic;
+    }
+
+    body.dark-mode a {
+      color: #66ccff;
     }
   </style>
 </head>
 <body>
 
+  <button class="toggle-button" onclick="toggleDarkMode()">🌙</button>
+
   <header>
     <h1>Jayesh's Portfolio</h1>
-    <h2 class="tagline">Creating What’s Next—One Line of Code at a Time.</h2>
+    <div class="tagline">Creating What’s Next—One Line of Code at a Time.</div>
   </header>
 
   <main>
     <section>
-      <h3>Featured Project</h3>
+      <h2>Featured Project</h2>
       <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/cadetBlueSnake395066/embed"></iframe>
-      <p style="text-align: center; margin-top: 1rem;">This is one of my interactive projects. It's built to demonstrate my problem-solving and creative skills in computer science.</p>
+      <p style="text-align: center; margin-top: 1rem;">This is my first project! I'm excited to keep building more.</p>
     </section>
 
     <section>
-      <h3>About Me</h3>
-      <p>I'm a high school student passionate about software development, global issues, and creating innovative solutions that matter. Through my CS Honors class, I work on projects inspired by the United Nations Sustainable Development Goals (SDGs).</p>
+      <h2>About Me</h2>
+      <p>Hello! I’m Jayesh — a student passionate about using computer science to build meaningful solutions. I’m especially inspired by the UN’s goals of <strong>Zero Hunger</strong> and <strong>Reduced Inequalities</strong>. I code mostly in <strong>Python</strong> and I'm just getting started with real-world projects. Stay tuned!</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Want to connect or see my code?</p>
+      <ul>
+        <li>Email: <a href="mailto:your.email@example.com">jayeshpatil.vhhscougars.org</a></li>
+        <li>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/JayeshPatil2010</a></li>
+        <!-- Add LinkedIn or other links if desired -->
+      </ul>
     </section>
   </main>
 
   <footer>
-    © 2025 Jayesh GX | Built with 💙 and code.
+    © 2025 Jayesh GX | Built with 💙 and Python
   </footer>
 
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      const btn = document.querySelector(".toggle-button");
+      btn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    }
+  </script>
 </body>
 </html>
