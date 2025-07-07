@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jayesh's Portfolio</title>
+  <title>Jayesh Patil's Portfolio</title>
   <style>
     :root {
       --bg-light: #f0f8ff;
@@ -103,36 +103,40 @@
       color: #66ccff;
     }
 
-    /* Sidebar navigation */
-    nav.sidebar {
+    /* Sleek floating nav */
+    nav.floating-nav {
       position: fixed;
       top: 50%;
-      left: 10px;
+      left: 0;
       transform: translateY(-50%);
       display: flex;
       flex-direction: column;
-      gap: 0.6rem;
-      background-color: #004080;
-      padding: 1rem;
-      border-radius: 12px;
-      z-index: 100;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      z-index: 999;
     }
 
-    nav.sidebar a {
-      color: white;
-      font-size: 0.9rem;
-      padding: 0.4rem 0.6rem;
-      background-color: #0066cc;
-      border-radius: 6px;
+    nav.floating-nav a {
+      display: block;
+      width: 38px;
+      height: 38px;
+      line-height: 38px;
       text-align: center;
+      background-color: rgba(0, 102, 204, 0.7);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: bold;
+      transition: all 0.2s ease-in-out;
     }
 
-    nav.sidebar a:hover {
-      background-color: #3399ff;
+    nav.floating-nav a:hover {
+      background-color: rgba(0, 102, 204, 1);
+      transform: scale(1.1);
     }
 
     @media (max-width: 768px) {
-      nav.sidebar {
+      nav.floating-nav {
         display: none;
       }
     }
@@ -142,20 +146,20 @@
 
   <button class="toggle-button" onclick="toggleDarkMode()">🌙</button>
 
-  <!-- Sidebar Navigation -->
-  <nav class="sidebar">
-    <a href="#project1">Project 1</a>
-    <a href="#project2">Project 2</a>
-    <a href="#project3">Project 3</a>
-    <a href="#project4">Project 4</a>
-    <a href="#project5">Project 5</a>
-    <a href="#project6">Project 6</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+  <!-- Sleek Floating Nav -->
+  <nav class="floating-nav">
+    <a href="#project1" title="Project 1">1</a>
+    <a href="#project2" title="Project 2">2</a>
+    <a href="#project3" title="Project 3">3</a>
+    <a href="#project4" title="Project 4">4</a>
+    <a href="#project5" title="Project 5">5</a>
+    <a href="#project6" title="Project 6">6</a>
+    <a href="#about" title="About">A</a>
+    <a href="#contact" title="Contact">C</a>
   </nav>
 
   <header>
-    <h1>Jayesh's Portfolio</h1>
+    <h1>Jayesh Patil's Portfolio</h1>
     <div class="tagline">Creating What’s Next—One Line of Code at a Time.</div>
   </header>
 
@@ -166,6 +170,7 @@
       <p>This project is an interactive visualization of the UN Sustainable Development Goals. I focused on the goals that inspire me most: <strong>Zero Hunger</strong> (top right) and <strong>Reduced Inequalities</strong> (bottom left). It was built to raise awareness through engagement and creative coding.</p>
     </section>
 
+    <!-- Project Placeholders -->
     <section id="project2">
       <h2>Project 2: [Coming Soon]</h2>
       <iframe width="410" height="460" src=""></iframe>
@@ -196,11 +201,13 @@
       <p>[Add a short description of your project here.]</p>
     </section>
 
+    <!-- Bio -->
     <section id="about">
       <h2>About Me</h2>
-      <p>Hello! I’m Jayesh — a student passionate about using computer science to build meaningful solutions. I’m especially inspired by the UN’s goals of <strong>Zero Hunger</strong> and <strong>Reduced Inequalities</strong>. I code mostly in <strong>Python</strong> and I'm just getting started with real-world projects. Stay tuned!</p>
+      <p>Hi! I’m Jayesh Patil — a student passionate about using computer science to build meaningful solutions. I’m especially inspired by the UN’s goals of <strong>Zero Hunger</strong> and <strong>Reduced Inequalities</strong>. I code mostly in <strong>Python</strong> and I'm just getting started with real-world projects. Stay tuned!</p>
     </section>
 
+    <!-- Contact -->
     <section id="contact">
       <h2>Contact</h2>
       <p>Want to connect or see my code?</p>
@@ -212,7 +219,7 @@
   </main>
 
   <footer>
-    © 2025 Jayesh GX | Built with 💙 and Python
+    © 2025 Jayesh Patil | Built with 💙 and Python
   </footer>
 
   <script>
