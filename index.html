@@ -140,6 +140,29 @@
         display: none;
       }
     }
+
+    /* Code snippet style */
+    pre {
+      background: #2d2d2d;
+      color: #ccc;
+      padding: 1em;
+      border-radius: 8px;
+      overflow-x: auto;
+      max-width: 410px;
+      margin: 0.5em auto 1em;
+      font-family: Consolas, 'Courier New', monospace;
+      font-size: 0.9rem;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    img.project-image {
+      width: 410px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      display: block;
+      margin: 1em auto 0;
+    }
   </style>
 </head>
 <body>
@@ -166,11 +189,51 @@
   <main>
     <section id="project1">
       <h2>Featured Project: Global Goals Interactive</h2>
+      
+      <!-- Splashscreen iframe -->
       <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/cadetBlueSnake395066/embed"></iframe>
+      
+      <!-- Project description -->
       <p>This project is an interactive visualization of the UN Sustainable Development Goals. I focused on the goals that inspire me most: <strong>Zero Hunger</strong> (top right) and <strong>Reduced Inequalities</strong> (bottom left). It was built to raise awareness through engagement and creative coding.</p>
+      
+      <!-- Concepts learned -->
+      <h3>Concepts Learned</h3>
+      <ul>
+        <li>Embedding interactive content in web pages</li>
+        <li>Using iframes for project demos</li>
+        <li>Understanding the UN Sustainable Development Goals framework</li>
+        <li>Basic HTML/CSS layout and styling</li>
+        <li>Designing user-focused engagement features</li>
+      </ul>
+      
+      <!-- Code snippet -->
+      <h3>Code Snippet</h3>
+      <pre><code>
+// Example Python snippet from my project
+def highlight_goals(goals):
+    # Filter goals for Zero Hunger and Reduced Inequalities
+    important_goals = []
+    for goal in goals:
+        if goal['name'] in ['Zero Hunger', 'Reduced Inequalities']:
+            important_goals.append(goal)
+    return important_goals
+
+goals = [
+    {'name': 'No Poverty', 'index': 1},
+    {'name': 'Zero Hunger', 'index': 2},
+    {'name': 'Reduced Inequalities', 'index': 10},
+]
+
+highlighted = highlight_goals(goals)
+print("Highlighted Goals:", highlighted)
+      </code></pre>
+      
+      <!-- Meaningful picture -->
+      <h3>Project Image</h3>
+      <img class="project-image" src="https://example.com/path-to-your-project-image.jpg" alt="Screenshot or diagram of Global Goals project" />
     </section>
 
-    <!-- Project Placeholders -->
+    <!-- Project placeholders -->
     <section id="project2">
       <h2>Project 2: [Coming Soon]</h2>
       <iframe width="410" height="460" src=""></iframe>
