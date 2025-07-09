@@ -227,39 +227,37 @@ Label('Jayesh', 373,184, size=10)
 
     <!-- Project placeholders -->
     <section id="project2">
-  <h2>Project 2: Climate Action Interactive</h2>
+      <h2>Project 2: Climate Action Interactive</h2>
+      <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/deepSkyBlueGoat129351/embed"></iframe>
+      <p>This interactive slideshow project focuses on the global goal of <strong>Climate Action</strong>. Created with Meet, this project illustrates the causes, effects, and solutions of climate change across five slides. Through visual design and engaging storytelling, we aim to spread awareness about environmental responsibility.</p>
 
-  <!-- Embedded project -->
-  <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/deepSkyBlueGoat129351/embed"></iframe>
+      <h3>Concepts Learned</h3>
+      <ul>
+        <li>Multi-slide interactivity using mouse events</li>
+        <li>Modular design through reusable functions</li>
+        <li>Using gradients and shapes to build icons and animations</li>
+        <li>Explaining scientific topics using creative visuals</li>
+      </ul>
 
-  <!-- Description -->
-  <p>
-    This interactive slideshow project explores the global goal of <strong>Climate Action</strong>. Created in collaboration with Meet, it walks viewers through the causes, effects, and solutions to climate change using animated graphics and educational slides. I contributed to the visual designs and explanations for how climate change affects us, and what solutions can help reduce its impact.
-  </p>
+      <h3>Jayesh's Logo</h3>
+      <p>My logo represents clouds with stylized lightning bolts and uses parameterized inputs like <code>color</code> and <code>lightningVisible</code> for flexibility. I designed this to reflect change and impact — matching the theme of climate action. On the final slide, the lightning bolts activate to symbolize how small changes can create powerful results.</p>
 
-  <!-- Concepts Learned -->
-  <h3>Concepts Learned</h3>
-  <ul>
-    <li>Creating interactive, multi-slide experiences using mouse events</li>
-    <li>Designing informative visuals and symbols (like thermometers, clouds, suns)</li>
-    <li>Using functions to organize repetitive drawing logic</li>
-    <li>Explaining real-world climate issues through visual code storytelling</li>
-  </ul>
+      <h3>Code Snippet</h3>
+      <pre><code># Jayesh's Custom Logo Function
 
-  <!-- Code Snippet -->
-  <h3>Code Snippet</h3>
-  <pre><code># Jayesh's Climate Action Slide (Solutions)
-Rect(0,0,400,400, fill='lightSkyBlue')
-meetLogo(42,55)
-jayeshLogo(230,70)
-Rect(0,329,400,71, fill='lightGreen')
-Label('Solutions/Climate Action', 200,141, font='montserrat', size=30)
-Label('There are many ways to combat climate change.',200,170, size=14)
-Label('Transition to clean energy like solar or wind.',200,188, size=14)
-Label('Stop deforestation & invest in carbon capture tech.',200,206, size=14)
-Oval(395,390,30,50, fill=gradient('orange','red', start='bottom'),border='grey')
-  </code></pre>
-</section>
+def jayeshLogo(x, y, color, lightningVisible):
+    Circle(x+10, y, 35, fill=color)
+    Circle(x-25, y, 30, fill=color)
+    Circle(x+60, y, 30, fill=color)
+    Circle(x+40, y+30, 30, fill=color)
+    Circle(x-10, y+30, 30, fill=color)
+    Polygon(x+5, y+33, x+20, y+33, x+11, y+64, x+15, y+80,
+            x+3, y+62, fill=gradient('gold','yellow','gold'), visible=lightningVisible)
+    Polygon(x+32, y+33, x+47, y+33, x+38, y+64, x+42, y+80,
+            x+30, y+62, fill=gradient('gold','yellow','gold'), visible=lightningVisible)
+    Polygon(x-22, y+33, x-7, y+33, x-16, y+64, x-12, y+80,
+            x-24, y+62, fill=gradient('gold','yellow','gold'), visible=lightningVisible)</code></pre>
+    </section>
 
 
     <section id="project3">
