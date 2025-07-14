@@ -267,10 +267,36 @@ jayeshLogo(280, 70, 'lightSteelBlue', True)  # Slide 5</code></pre>
     </section>
 
 
-    <section id="project3">
-      <h2>Project 3: [Coming Soon]</h2>
-      <iframe width="410" height="460" src=""></iframe>
-      <p>[Add a short description of your project here.]</p>
+        <section id="project3">
+      <h2>Project 3: Windmill Clicking Simulator</h2>
+      <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/hotPinkFox976274/embed"></iframe>
+      <p>This game was inspired by the clean energy global goal. The objective is to generate energy by clicking on windmills and purchasing upgrades. As energy accumulates, new windmills (silver and gold) become unlockable, adding complexity and reward to gameplay. It introduces dynamic growth systems and playful UI interaction.</p>
+
+      <h3>Concepts Learned</h3>
+      <ul>
+        <li>Using <code>onStep</code> to create timed energy generation</li>
+        <li>Rotating shapes using <code>rotateAngle</code></li>
+        <li>Conditionally unlocking elements based on progress</li>
+        <li>Parameter-driven function design for reuse</li>
+        <li>Interactive UI using <code>onMousePress</code></li>
+      </ul>
+
+      <h3>My windMills() Function</h3>
+      <p>This function is responsible for handling all energy gain based on windmill level. It checks whether the player has unlocked better windmills and adds energy accordingly. Here’s a simplified version of it:</p>
+      <pre><code>def windMills(energyAdded, windMillLevel):
+    if windMillLevel == 'Bronze':
+        Energy.value += energyAdded
+    elif windMillLevel == 'Silver' and Energy.value >= 1000:
+        Energy.value += energyAdded
+    elif windMillLevel == 'Gold' and Energy.value >= 2500:
+        Energy.value += energyAdded
+
+# Function calls
+windMills(1, 'Bronze')
+windMills(10, 'Silver')
+windMills(100, 'Gold')</code></pre>
+
+      <p>I built this with my partner, Meet, and while I focused on the energy mechanics, windmill unlocking, and the function logic, Meet helped structure the upgrade buttons and the Gifts.</p>
     </section>
 
     <section id="project4">
