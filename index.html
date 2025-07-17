@@ -300,9 +300,39 @@ windMills(100, 'Gold')</code></pre>
     </section>
 
     <section id="project4">
-      <h2>Project 4: [Coming Soon]</h2>
-      <iframe width="410" height="460" src=""></iframe>
-      <p>[Add a short description of your project here.]</p>
+      <h2>Project 4: Mission Possible - Zero Hunger Quiz</h2>
+      <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/violetSeal375786/embed"></iframe>
+      <p>This interactive quiz teaches players about global hunger using facts and questions. Built collaboratively by Jayesh and Meet, it helps test and teach knowledge on hunger and food insecurity. Players answer six questions and receive feedback and fun facts along the way.</p>
+
+      <h3>Concepts Learned</h3>
+      <ul>
+        <li>Event-driven programming with <code>onKeyPress</code> and <code>onMousePress</code></li>
+        <li>Screen transitions using app state</li>
+        <li>Storing quiz logic using control flow and global variables</li>
+        <li>Using labels, shapes, and layout functions to build a UI</li>
+      </ul>
+
+      <h3>Code Snippet: Handling Keyboard Input</h3>
+      <pre><code># Respond to user answers with key input
+
+def onKeyPress(key):
+    if app.questionNum == 1:
+        if key == 'c':
+            app.correct += 1
+            correctLabel.value = 'Correct!'
+            correctLabel.fill = 'green'
+            correctLabel.visible = True
+            correctLabel.toFront()
+            app.questionNum += 1
+            sleep(0.08)
+        else:
+            correctLabel.value = 'Incorrect, try again'
+            correctLabel.fill = 'red'
+            correctLabel.visible = True
+            correctLabel.toFront()</code></pre>
+
+      <h3>Explanation</h3>
+      <p>This code checks if the user is on question 1 and listens for key presses. If the correct key (<code>'c'</code>) is pressed, the quiz marks it correct, updates the score, and moves to the next question. Otherwise, it shows an error message. Th
     </section>
 
     <section id="project5">
