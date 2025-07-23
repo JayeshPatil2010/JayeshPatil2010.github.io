@@ -336,10 +336,45 @@ def onKeyPress(key):
     </section>
 
     <section id="project5">
-      <h2>Project 5: [Coming Soon]</h2>
-      <iframe width="410" height="460" src=""></iframe>
-      <p>[Add a short description of your project here.]</p>
-    </section>
+  <h2>Project 5: Zero Hunger Delivery Maze</h2>
+  <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/wheatTruck428709/embed"></iframe>
+
+  <p>
+    In this game, the player drives a food truck to collect food from green stations and deliver it to purple houses, representing hungry children in need. This supports the UN goal of <strong>Zero Hunger</strong>. The maze structure and logic encourage exploration and accurate deliveries.
+  </p>
+
+  <h3>Concepts Learned</h3>
+  <ul>
+    <li>Function abstraction with arguments</li>
+    <li>Collision detection with <code>hitsShape()</code> and user input events</li>
+    <li>Game state management (splash, in-game, win)</li>
+    <li>Layering with groups (<code>wallGroup</code>)</li>
+  </ul>
+
+  <h3>Key Custom Function: <code>placeWalls(x, y, width, height)</code></h3>
+  <pre><code>def placeWalls(x, y, width, height):
+    if (width >= 0 or height >= 0) or (x+width > house.left and y+height > house.top):
+        wall = Rect(x, y, width, height, fill='red')
+        wallGroup.add(wall)
+        wallGroup.toFront()</code></pre>
+
+  <h3>How I Call <code>placeWalls()</code> in My Code</h3>
+  <pre><code>placeWalls(0,0,40,288)
+placeWalls(40,125,200,30)
+placeWalls(240,90,30,65)
+placeWalls(140,1,260,40)
+placeWalls(350,1,50,400)
+placeWalls(170,230,40,400)
+placeWalls(290,250,130,40)
+placeWalls(0,390,400,10)</code></pre>
+
+  <h3>Game Mechanics & Feedback</h3>
+  <ul>
+    <li>Players must interact with food stations using the <strong>'enter'</strong> key to pick up and deliver food.</li>
+    <li>If the player delivers to the wrong house, the game will check if they have enough <strong> food </strong>, and will deposit the food if you have enough.</li>
+    <li>Correct deliveries update <code>truckFood</code> and trigger a win screen when all are completed.</li>
+  </ul>
+</section>
 
     <section id="project6">
       <h2>Project 6: [Coming Soon]</h2>
