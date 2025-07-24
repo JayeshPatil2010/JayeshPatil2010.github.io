@@ -376,7 +376,7 @@ placeWalls(0,390,400,10)</code></pre>
   </ul>
 </section>
 
-    <section id="project6">
+    <section id="project6" class="project-section">
   <h2>Project 6 – Hunger Hero Catch!</h2>
   <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/whiteBird052825/embed"></iframe>
   <p>
@@ -396,6 +396,17 @@ placeWalls(0,390,400,10)</code></pre>
   <p>
     <strong>Custom Function Showcase:</strong><br>
     One of the most important functions in this project is <code>endGame(message, score, bgColor, subMessage)</code>, which handles the transition to the end screen. It is called from multiple places in the game based on different scoring conditions. Here are a few examples of how and where it is used:
+    <pre><code>def endGame(message, score, bgColor, subMessage):
+    Group(
+        Rect(0,0,400,400, fill = bgColor),
+        Label(message, 200, 140, size = 30, bold = True, font = 'Cinzel'),
+        Label('Score:', 180, 200, size = 20, bold = True, font = 'Cinzel', fill = 'white'),
+        Label(score, 230, 200, size = 20, bold = True, font = 'Cinzel', fill = 'white'),
+        Label(subMessage, 200, 250, size = 15, bold = True, font = 'Cinzel')
+        )
+    player.visible = False
+    apple.visible = False
+    app.stop()</code></pre>
     <pre><code>if app.score &lt; 4:
     endGame("Try Harder!", app.score, 'lightCoral', "You can do better!")
 elif app.score &lt; 10:
