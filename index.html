@@ -377,10 +377,63 @@ placeWalls(0,390,400,10)</code></pre>
 </section>
 
     <section id="project6">
-      <h2>Project 6: [Coming Soon]</h2>
-      <iframe width="410" height="460" src=""></iframe>
-      <p>[Add a short description of your project here.]</p>
-    </section>
+  <h2>Project 6 – Hunger Hero Catch!</h2>
+  <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/whiteBird052825/embed"></iframe>
+  <p>
+    <strong>Description:</strong><br>
+    This final CS Honors project is a fast-paced food-catching game where the player controls a bowl to catch falling apples, representing food supplies. Players must move quickly to prevent the apples from hitting the ground, which symbolizes food waste.
+  </p>
+  <p>
+    <strong>Key Concepts Learned:</strong>
+    <ul>
+      <li>Multi-screen transitions (splash, game, stats, end)</li>
+      <li>Conditional logic based on score thresholds</li>
+      <li>Collision detection with <code>hitsShape()</code></li>
+      <li>Custom function with 4 parameters: <code>endGame(message, score, bgColor, subMessage)</code></li>
+      <li>Randomization and stat tracking with <code>random.randint()</code></li>
+    </ul>
+  </p>
+  <p>
+    <strong>Custom Function Showcase:</strong><br>
+    One of the most important functions in this project is <code>endGame(message, score, bgColor, subMessage)</code>, which handles the transition to the end screen. It is called from multiple places in the game based on different scoring conditions. Here are a few examples of how and where it is used:
+    <pre><code>if app.score &lt; 4:
+    endGame("Try Harder!", app.score, 'lightCoral', "You can do better!")
+elif app.score &lt; 10:
+    endGame("Nice Try!", app.score, 'navajoWhite', "You're getting there!")
+else:
+    endGame("You fed the World!", app.score, 'lightGreen', "Amazing work!")</code></pre>
+    This modular function helps keep the game code clean while delivering unique messages based on performance.
+  </p>
+  <p>
+    <strong>Random Fact Feature:</strong><br>
+    On the stats screen, clicking the "Random Stat" button shows one of five randomized hunger facts using this logic:
+    <pre><code>app.statnum = random.randint(1,5)
+if app.statnum == 1:
+    randStatLabel.value = 'Almost +300 million people faced acute insecurity in 2024'
+elif app.statnum == 2:
+    randStatLabel.value = '117 million people will not get aid due to funding cuts'
+elif app.statnum == 3:
+    randStatLabel.value = '37.7 million children below 5 are acutely malnourished'
+elif app.statnum == 4:
+    randStatLabel.value = 'Agriculture investment is 4x more effective than aid'
+elif app.statnum == 5:
+    randStatLabel.value = 'Over a quarter of the world faces food insecurity'</code></pre>
+    This randomization adds replay value and educational depth to the stats screen.
+  </p>
+  <p>
+    <strong>End Game Logic (Difficulty Scaling):</strong>
+    <ul>
+      <li>If the player misses too many apples, the game ends based on performance.</li>
+      <li>Custom messages and background colors give feedback from "Try Harder!" to "You fed the World!"</li>
+      <li>Each end game screen uses the <code>endGame()</code> function with a message, score, color, and motivational line.</li>
+    </ul>
+  </p>
+  <p>
+    <strong>Fun Detail:</strong><br>
+    The game becomes faster as the player catches more apples using:
+    <code>app.speed *= 1.15</code>
+  </p>
+</section>
 
     <!-- Bio -->
     <section id="about">
